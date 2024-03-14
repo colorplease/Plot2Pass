@@ -17,6 +17,7 @@ year_current = today[2]
 
 def check_out_of(points_out_of):
     #POINTS OUT OF
+    global input_valid
     num_input_checker(points_out_of)
     if input_valid == False:
          Error_lbl.config(text="ERROR: TYPE VALID NUMBER")
@@ -32,6 +33,8 @@ def check_out_of(points_out_of):
         input_valid = False
 
 def check_got(points_gotten):
+    global input_valid
+    print("hello")
     if int(TOTAL_POINTS) - int(points_gotten) > 0:
         num_input_checker(points_gotten)
     else:
